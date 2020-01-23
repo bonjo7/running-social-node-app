@@ -4,13 +4,15 @@
   "description": "Node application which will manage the serve side of my fyp, running social application",
   "main": "application.js",
   "scripts": {
-    "start": "nodemon application.js"
-  }, 
+    "start": "application.js",
+    "server": "nodemon application.js"
+  },
   "author": "Bernard Thompson",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.2.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.3.1",
     "jsonwebtoken": "^8.5.1",
