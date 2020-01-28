@@ -18,10 +18,10 @@ DB();
 app.get('/', (req, res) => res.send('Node application is running successfully'));
 
 //Define routes which will be used in the backend
-app.use('/lib/auth', require('./lib/routes/auth'));
-app.use('/lib/posts', require('./lib/routes/posts'));
-app.use('/lib/profile', require('./lib/routes/profile'));
-app.use('/lib/users', require('./lib/routes/users'));
+app.use('/lib/routes/auth', require('./lib/routes/auth'));
+app.use('/lib/routes/posts', require('./lib/routes/posts'));
+app.use('/lib/routes/profile', require('./lib/routes/profile'));
+app.use('/lib/routes/users', require('./lib/routes/users'));
 
 //Pass in port with function call back 
 app.listen(PORT, () => console.log('App started at: ' + new Date() 
