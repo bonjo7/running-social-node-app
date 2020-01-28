@@ -1,5 +1,6 @@
 const express = require('express');
 const DB = require('./db/db');
+const bodyParser = require('body-parser');
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -13,6 +14,10 @@ const PORT = process.env.PORT || 3001;
 const ENV = process.env.APP_ENV || 'dev';
 
 DB();
+
+//Allow requests of the body to work in both urlencode and json
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 
 //Get request to send data to the browser
 app.get('/', (req, res) => res.send('Node application is running successfully'));
