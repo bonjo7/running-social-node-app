@@ -16,7 +16,7 @@ const ENV = process.env.APP_ENV || 'dev';
 DB();
 
 //Allow requests of the body to work in both urlencode and json
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //Get request to send data to the browser
