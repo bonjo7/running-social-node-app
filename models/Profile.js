@@ -40,20 +40,16 @@ const ProfileSchema = new moongoose.Schema({
     races: [
         {
         racename: {
-            type: String,
-            required: true
+            type: String
         },
         racelocation: {
-            type: String,
-            required: true
+            type: String
         },
         racedate: {
-            type: Date,
-            required: true
+            type: Date
         },
         racetime : {
-            type: String,
-            required: true
+            type: String
         }
     }
     ],
