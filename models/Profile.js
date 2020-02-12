@@ -64,4 +64,4 @@ const ProfileSchema = new moongoose.Schema({
     }
 });
 
-module.exports = Profile =moongoose.model('profile', ProfileSchema);
+module.exports = Profile = moongoose.model('profile', ProfileSchema);

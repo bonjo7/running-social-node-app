@@ -12,7 +12,8 @@ Due to server deprecation now required to add unifiedTopology
 const connectMongoDB = async() => {
     try {
         await mongoose.connect(mongo_conn_url, {
-            useUnifiedTopology: true
+            useUnifiedTopology: true,
+            useFindAndModify: false
         });
         console.log('Successfully conneted to mongoDB: ' + mongo_conn_url)
     }
