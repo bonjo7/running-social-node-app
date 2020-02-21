@@ -46,7 +46,7 @@ const ProfileSchema = new moongoose.Schema({
             type: String
         },
         racedate: {
-            type: Date
+            type: String
         },
         racetime : {
             type: String
