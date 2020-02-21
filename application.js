@@ -1,0 +1,35 @@
+const express = require('express');
+const DB = require('./db/db');
+const bodyParser = require('body-parser');
+
+const dotenv = require('dotenv');
+dotenv.config();
+
+//Initialize app variable with express
+const app = express();
+
+//Set port value for app to run on if env var is unavailable default to 3001
+const PORT = process.env.PORT || 3001;
+//Define enviornment from env var, default dev
+const ENV = process.env.APP_ENV || 'dev';
+
+DB();
+
+//Allow requests of the body to work in both urlencode and json
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+//Get request to send data to the browser
+app.get('/', (req, res) => res.send('Node application is running successfully'));
+
+//Define routes which will be used in the backend
+app.use('/lib/routes/auth', require('./lib/routes/auth'));
+app.use('/lib/routes/posts', require('./lib/routes/posts'));
+app.use('/lib/routes/profile', require('./lib/routes/profile'));
+app.use('/lib/routes/users', require('./lib/routes/users'));
+
+//Pass in port with function call back 
+app.listen(PORT, () => console.log('App started at: ' + new Date() 
+    + '\nOn port: ' 
+    + PORT + '.\nEnvoirnment: ' 
+    + ENV ));
