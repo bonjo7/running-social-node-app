@@ -2,6 +2,10 @@ const express = require('express');
 const DB = require('./db/db');
 const bodyParser = require('body-parser');
 
+var cors = require('cors');
+
+
+
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -14,7 +18,7 @@ const PORT = process.env.PORT || 3001;
 const ENV = process.env.APP_ENV || 'dev';
 
 DB();
-
+app.use(cors());
 //Allow requests of the body to work in both urlencode and json
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
