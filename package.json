@@ -4,7 +4,7 @@
   "description": "Node application which will manage the serve side of my fyp, running social application",
   "main": "application.js",
   "scripts": {
-    "start": "application.js",
+    "start": "node application.js",
     "server": "nodemon application.js"
   },
   "author": "Bernard Thompson",
