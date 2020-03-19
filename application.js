@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 
 //Set port value for app to run on if env var is unavailable default to 3001
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || '0.0.0.0';
 //Define enviornment from env var, default dev
 const ENV = process.env.APP_ENV || 'dev';
 
