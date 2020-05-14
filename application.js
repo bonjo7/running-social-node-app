@@ -38,4 +38,3 @@ app.listen(PORT, () => console.log('App started at: ' + new Date()
     + PORT + '.\nEnvoirnment: ' 
     + ENV ));
 
-//test
