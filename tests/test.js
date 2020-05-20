@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-const request = require("supertest");
+
 const app = require("../application.js");
 const chai = require("chai");
 const chaiHttp = require("chai-http");
@@ -24,19 +24,26 @@ describe("Server!", () => {
         done();
       });
   });
+});
+
+  const userCredentials = {
+    username: 'sponge@bob.com', 
+    password: 'garyTheSnail'
+  }
 
   describe("Login API", function () {
     it("Should success if credential is valid", (done) => {
+    var authenticatedUser = request.agent(app);
       this.timeout(50000);
-      chai
-        .request(app)
+      authenticatedUser
         .post("/lib/routes/auth")
         .set("Accept", "application/json")
         .set("Content-Type", "application/json")
-        .send({ username: "username", password: "password" })
-        .expect(200)
-
-        .end(done);
+        .send(userCredentials)
+        .end(function(err, response){
+            expect(response.statusCode).to.equal(200);
+            done();
+          });
     });
   });
-});
+
