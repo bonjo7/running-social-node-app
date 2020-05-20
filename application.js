@@ -46,7 +46,8 @@ app.listen(PORT, () =>
       "\nOn port: " +
       PORT +
       ".\nEnvoirnment: " +
-      ENV
+      ENV +
+      "\nNode application is running successfully, envoirnment: " + ENV
   )
 );
 
