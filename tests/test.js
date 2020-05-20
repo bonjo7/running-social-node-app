@@ -27,7 +27,7 @@ describe("Server!", () => {
 });
 
   const userCredentials = {
-    username: 'sponge@bob.com', 
+    email: 'sponge@bob.com', 
     password: 'garyTheSnail'
   }
 
