@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-
+var request = require('supertest');
 const app = require("../application.js");
 const chai = require("chai");
 const chaiHttp = require("chai-http");
@@ -27,8 +27,8 @@ describe("Server!", () => {
 });
 
   const userCredentials = {
-    email: 'sponge@bob.com', 
-    password: 'garyTheSnail'
+    email: 'bernard@bernard.com', 
+    password: 'myverysecretpassword'
   }
 
   describe("Login API", function () {
