@@ -26,8 +26,9 @@ app.get("/", (req, res) => {
 //   res.send("Node application is running successfully, in envoirnment");
   res.json({
     status: "Application Launched",
-    message: "Node application is running successfully" + ENV,
+    message: "Node application is running successfully, envoirnment: " + ENV,
   });
+  console.log("Node application is running successfully, envoirnment: " + ENV)
   
 });
 
