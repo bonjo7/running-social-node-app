@@ -26,7 +26,7 @@ describe("Server!", () => {
   });
 
   describe('Login API', function() {
-    it('Should success if credential is valid', function(done) {
+    it('Should success if credential is valid', (done) => {
         request(app)
            .post('/lib/routes/auth')
            .set('Accept', 'application/json')
@@ -35,7 +35,7 @@ describe("Server!", () => {
            .expect(200)
           
            .end(done);
-    }); 
+    }).timeout(10000); 
     
 });
 
