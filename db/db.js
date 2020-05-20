@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const mongo_conn_url = process.env.MONGO_CONN_URL;
+const mongo_conn_url = process.env.MONGO_CONN_URL || 'mongodb://mongodb0.example.com:27017';
 
 /*
 Methot to connect to mongo cluster
