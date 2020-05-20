@@ -34,10 +34,8 @@ describe("Server!", () => {
            .send({ username: 'username', password: 'password' })
            .expect(200)
           
-           .end(done);
+           .end(done);}).catch(done);
     }); 
 
     //testing
-});
-
 });
