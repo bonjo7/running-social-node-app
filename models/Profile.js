@@ -7,6 +7,10 @@ const ProfileSchema = new mongoose.Schema({
         ref: 'user'
     },
 
+    sex: {
+        type: String
+    },
+
     runningclub: {
         type: String
     },
