@@ -47,7 +47,7 @@ app.listen(PORT, () =>
       PORT +
       ".\nEnvoirnment: " +
       ENV +
-      "\nNode application is running successfully, envoirnment: " + ENV
+      "ci/cd DEMO\nNode application is running successfully, envoirnment: " + ENV
   )
 );
 
