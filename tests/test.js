@@ -19,7 +19,7 @@ describe("Server!", () => {
         expect(res).to.have.status(200);
         expect(res.body.status).to.equals("Application Launched");
         expect(res.body.message).to.equals(
-            "Node application is running successfully, envoirnment: " + ENV
+            "CI/CD demo Node application is running successfully, envoirnment: " + ENV
         );
         done();
       });
