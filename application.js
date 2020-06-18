@@ -23,13 +23,12 @@ app.use(express.json());
 
 //Get request to send data to the browser
 app.get("/", (req, res) => {
-//   res.send("Node application is running successfully, in envoirnment");
+  //   res.send("Node application is running successfully, in envoirnment");
   res.json({
-    status: "Application Running - Version 1.4.0",
+    status: "1st year DEMO *** Application Running - Version 1.4.1",
     message: "Node application is running successfully, envoirnment: " + ENV,
   });
-  console.log("Node application is running successfully, envoirnment: " + ENV)
-  
+  console.log("Node application is running successfully, envoirnment: " + ENV);
 });
 
 //Define routes which will be used in the backend
@@ -47,7 +46,8 @@ app.listen(PORT, () =>
       PORT +
       ".\nEnvoirnment: " +
       ENV +
-      "Node application is running successfully, envoirnment: " + ENV
+      "Node application is running successfully, envoirnment: " +
+      ENV
   )
 );
 
