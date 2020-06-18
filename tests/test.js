@@ -18,7 +18,7 @@ describe("Server!", () => {
       .end((err, res) => {
         expect(res).to.have.status(200);
         expect(res.body.status).to.equals(
-          "1st year DEMO *** Application Running - Version 1.4.1"
+          "Application Running - Version 1.4.1"
         );
         expect(res.body.message).to.equals(
           "Node application is running successfully, envoirnment: " + ENV

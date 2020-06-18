@@ -25,7 +25,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   //   res.send("Node application is running successfully, in envoirnment");
   res.json({
-    status: "1st year DEMO *** Application Running - Version 1.4.1",
+    status: "Application Running - Version 1.4.1",
     message: "Node application is running successfully, envoirnment: " + ENV,
   });
   console.log("Node application is running successfully, envoirnment: " + ENV);
